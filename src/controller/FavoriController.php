@@ -1,5 +1,4 @@
 <?php
-
 function afficheFavori(){
     include(__DIR__.'/../../templates/favori/index.php');
 }
@@ -28,7 +27,7 @@ function favori(){
             setcookie('favori', $texte,-1,'/');
 
             //RENVOYER UNE VUE
-            include(__DIR__.'/../../templates/favori/index.php');
+            include __DIR__ . '/../../templates/favori/index.php';
 
             return;
         }
@@ -52,7 +51,8 @@ function favori(){
     setcookie('favori', $texte,-1,'/');
     
 
-
+    var_dump($_COOKIE['favori']);
+    die();
     include(__DIR__.'/../../templates/favori/index.php');
 
     

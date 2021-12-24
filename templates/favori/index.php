@@ -7,7 +7,7 @@ include(__DIR__ . '/../components/header.php');
 <h1> page Favori</h1>
 
 <?php
-$favori = json_decode($_COOKIE['favori']);
+$favori=json_decode($_COOKIE['favori']);
 if (isset($favori)) {
 
 
