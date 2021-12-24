@@ -31,16 +31,20 @@ else if($path == '/catalogue/favori'){
 }
 
 
-elseif($path=='/catalogue/favori/add'){
+else if($path=='/catalogue/favori/add'){
     include(__DIR__.'/../src/controller/FavoriController.php');
     favori();
 }
 
-elseif($path=='/catalogue/favori/clear'){
+else if($path=='/catalogue/favori/clear'){
     include(__DIR__.'/../src/controller/FavoriController.php');
     vider();
 }
 
+else if($path=='/UneAnnonce'){
+    include(__DIR__.'/../src/controller/UneAnnonce.php');
+    afficherAnnonce();
+}
 else{
     "url pas valide";
 }

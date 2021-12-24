@@ -20,6 +20,10 @@ foreach ($liste as $list) {
                 <input type="hidden" name="id" value="<?= $list->id_annonce ?>">
                 <button type="submit" class="btn btn-success"><i class="fas fa-star text-warning"></i></button>
             </form>
+            <form action="/UneAnnonce" method="POST">
+                <input type="hidden" name="id" value="<?= $list->id_annonce ?>">
+                <button type="submit" class="btn btn-success">Voir l'annonce</button>
+            </form>
         </div>
     </div>
 
