@@ -1,5 +1,6 @@
 <?php
-function show(){
+
+function afficheFavori(){
     include(__DIR__.'/../../templates/favori/index.php');
 }
 
@@ -24,10 +25,10 @@ function favori(){
             $texte = json_encode($favori);
 
             // Je créé le COOKIE grâce au texte
-            setcookie('cart', $texte,-1,'/');
+            setcookie('favori', $texte,-1,'/');
 
             //RENVOYER UNE VUE
-            include __DIR__ . '/../../templates/favori/index.php';
+            include(__DIR__.'/../../templates/favori/index.php');
 
             return;
         }

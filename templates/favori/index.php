@@ -7,9 +7,9 @@ include(__DIR__ . '/../components/header.php');
 <h1> page Favori</h1>
 
 <?php
-
-
+$favori = json_decode($_COOKIE['favori']);
 if (isset($favori)) {
+
 
     foreach ($favori as $list) {
 
@@ -19,7 +19,7 @@ if (isset($favori)) {
 ?>
 
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="data:image/jpeg;base64,<?php echo base64_encode($list[$i]->image); ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"> <span> <?= $list[$i]->id_annonce ?></span> <?= $list[$i]->titre; ?></h5>
                 <p class="card-text"><?= $list[$i]->message; ?></p>

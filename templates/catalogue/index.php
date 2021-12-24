@@ -8,12 +8,11 @@ include(__DIR__ . '/../components/header.php');
 
 <?php
 foreach ($liste as $list) {
-    var_dump($list);
-    die();
+  
 ?>
 
     <div class="card" style="width: 18rem;">
-        <img src=<?php $list->image;?> class="card-img-top" alt="...">
+        <img src="data:image/jpeg;base64,<?php echo base64_encode($list->image); ?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"> <span> <?= $list->id_annonce ?></span> <?=$list->titre; ?></h5>
             <p class="card-text"><?= $list->message; ?></p>

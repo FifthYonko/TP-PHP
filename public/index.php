@@ -25,6 +25,10 @@ else if($path == '/catalogue'){
     include(__DIR__.'/../src/controller/CatalogueController.php');
     afficher();
 }
+else if($path == '/catalogue/favori'){
+    include(__DIR__.'/../src/controller/FavoriController.php');
+    afficheFavori();
+}
 
 
 elseif($path=='/catalogue/favori/add'){
